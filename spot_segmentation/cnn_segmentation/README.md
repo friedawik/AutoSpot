@@ -6,6 +6,6 @@ This library allows for toggling amongst many different CNN-based segmentation m
 
 ### Training and performance evaluation
 The code folder includes python scripts for training on the spot data. It also includes scripts to evaluate the results in terms of performance metrics such as IoU, accuracy, precision.
-![Image Description](predictions/test_0.png)
+![Image Description](predictions/DeepLabV3plus_finetuned_0.png)
 
 
