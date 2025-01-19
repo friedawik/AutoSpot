@@ -1,0 +1,20 @@
+# Ignore data folder
+data/*
+
+# Ignore result folders in segmentation folder 
+spot_segmentation/cnn_segmentation/code/wandb*
+spot_segmentation/cnn_segmentation/code/lightning_logs*
+spot_segmentation/cnn_segmentation/code/__pycache__*
+spot_segmentation/yolo/runs
+
+# Ignore result folders i detection folder
+spot_detection/yolo/runs
+
+# Ignore models
+*.ckpt
+*.pth
+*.pt
+
+
+
+
