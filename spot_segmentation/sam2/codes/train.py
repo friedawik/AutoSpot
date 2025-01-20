@@ -13,7 +13,7 @@ from sam2.build_sam import build_sam2
 from sam2.sam2_image_predictor import SAM2ImagePredictor
 from IPython import embed
 
-# Path to the chest-ct-segmentation dataset folder
+# Path to the dataset folder
 
 data_dir = "finetuning/"
 images_dir = os.path.join(data_dir, "images")
@@ -171,50 +171,11 @@ def read_batch(data, visualize_data=False):
 
 # Set up sam2
 
-def adjust_model_for_grayscale(model):
-    # Identify the first convolutional layer dynamically
-    for name, module in model.named_modules():
-        if isinstance(module, nn.Conv2d):
-            first_conv_layer_name = name
-            first_conv_layer = module
-            break
-    
-    # Modify the first convolutional layer to accept single-channel input
-    new_conv_layer = nn.Conv2d(
-        in_channels=1,
-        out_channels=first_conv_layer.out_channels,
-        kernel_size=first_conv_layer.kernel_size,
-        stride=first_conv_layer.stride,
-        padding=first_conv_layer.padding,
-        bias=first_conv_layer.bias is not None
-    )
-    
-    with torch.no_grad():
-        # Initialize the weights of the new conv layer
-        new_conv_layer.weight[:] = first_conv_layer.weight.mean(dim=1, keepdim=True)
-        if first_conv_layer.bias is not None:
-            new_conv_layer.bias[:] = first_conv_layer.bias
-
-    # Replace the first convolutional layer with the new layer
-    parent_module = model
-    submodule_names = first_conv_layer_name.split('.')
-    for submodule_name in submodule_names[:-1]:
-        parent_module = getattr(parent_module, submodule_name)
-    
-    setattr(parent_module, submodule_names[-1], new_conv_layer)
-    
-    return model
-
 
 
 sam2_checkpoint = "sam2_hiera_tiny.pt"  # @param ["sam2_hiera_tiny.pt", "sam2_hiera_small.pt", "sam2_hiera_base_plus.pt", "sam2_hiera_large.pt"]
 model_cfg = "sam2_hiera_t.yaml" # @param ["sam2_hiera_t.yaml", "sam2_hiera_s.yaml", "sam2_hiera_b+.yaml", "sam2_hiera_l.yaml"]
-
-# Adjust the SAM2 model for grayscale input
 sam2_model = build_sam2(model_cfg, sam2_checkpoint, device='cuda')
-
-#sam2_model = adjust_model_for_grayscale(sam2_model)
-
 predictor = SAM2ImagePredictor(sam2_model)
 
 
