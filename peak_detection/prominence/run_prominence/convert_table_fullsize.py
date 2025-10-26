@@ -7,9 +7,10 @@ from IPython import embed
 
 def transform_coordinates(df, img_size, x_num, y_num):
     """
-    Transform coordinates by rotating, flipping, and shifting.
-    Assumes the long lat coordinates can be directly translated
-    to x,y coordinates (neglect curvature of earth).
+    Transforms long lat coordinates from image patch of 256*256 to
+    Cartesian coordinates in full 2048*2048 image by rotating, flipping, 
+    and shifting. Assumes the long lat coordinates can be directly 
+    translated to x,y coordinates (neglect curvature of earth).
     
     Args:
     df (pd.DataFrame): Input DataFrame with 'lat' and 'long' columns.
@@ -48,7 +49,7 @@ def main():
     
     img_id = sys.argv[1]
     old_file = 'prominence/results.txt'
-    img_size = 512  # Image patch size (should be parameterized in future)
+    img_size = 256  # Image patch size (should be parameterized in future)
     
     # Extract patch numbers from image ID
     x_num = int(img_id[-1])
@@ -69,6 +70,10 @@ def main():
     if os.path.exists(file_path):
         df_fullsize = pd.read_csv(file_path, sep=',')
         df_new = pd.concat([df_fullsize, df_new], ignore_index=True)
+    else:
+        with open(file_path, 'w') as file:
+            file.write('')  # Optional: write initial content
+        print(f"The file {file_path} has been created.")
     
     df_new.to_csv(file_path, sep=',', index=False)
     print(f"Results saved to {file_path}")

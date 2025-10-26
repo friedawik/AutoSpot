@@ -1,10 +1,13 @@
+
 import sys
 import numpy as np
 import pandas as pd
+from IPython import embed
 
 def transform_coordinates(df, img_size):
     """
-    Transform coordinates by rotating and flipping.
+    Transform long lat coordinates of 256*256 patch into Cartesian
+    coordinates by rotating and flipping.
     
     Args:
     df (pd.DataFrame): Input DataFrame with 'lat' and 'long' columns.
@@ -40,21 +43,24 @@ def main():
     
     img_id = sys.argv[1]
     old_file = '../run_prominence/prominence/results.txt'
-    img_size = 512  # Image size (should be parameterized in future)
-    
+    img_size = 256  # Image size (should be parameterized in future)
+
     # Read the input file
     df_old = pd.read_csv(old_file, delimiter=',', header=None)
     columns = ['lat', 'long', 'elevation', 'key_s_lat', 'key_s_long', 'prominence']
     df_old.columns = columns
     
+    # remove bad entries on edges
+    df_old = df_old[df_old['long']<1]
+    df_old = df_old[df_old['lat']<1]
+
     # Transform coordinates
     df_new = transform_coordinates(df_old, img_size)
     
     # Save transformed results
-    output_file = f'../results/results_patch/{img_id}.txt'
+    output_file = f'../results/results_patch/starved/{img_id}.txt'
     df_new.to_csv(output_file, sep=',', index=False)
     print(f"Transformed results saved to {output_file}")
 
 if __name__ == "__main__":
     main()
-
