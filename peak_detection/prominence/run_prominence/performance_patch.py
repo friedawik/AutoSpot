@@ -7,10 +7,17 @@ from matplotlib.colors import ListedColormap
 from scipy.ndimage import label
 
 """
-Code to calculate precision and recall, where TP is any peak inside of
-a gt mask and FP is any mask outside of gt mask. 
+Code to calculate precision and recall of single 256*256 patches, where TP is 
+any peak inside of a gt mask and FP is any mask outside of gt mask. FP is any 
+mask that does not contain a detected peak.
 
-The results are plotted as 
+The results are plotted as: 
+1) GT masks corresponding to TP or FP colored in different colors.
+2) Plot of prominence vs. elevation.
+
+Args:
+    min_elevation (int): The minimum elevation threshold used for visualization, specified as a command-line argument.
+    min_prominence (int): The minimum prominence value for features to be included in the visualization, also specified as a command-line argument.
 """
 
 def load_data(img_id, min_elevation, min_prominence=None):
