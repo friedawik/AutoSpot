@@ -1,2 +1,4 @@
-# AutoSpot
-Autophagy spot segmentation and detection for fluorescence image analysis.
+### AutoSpot
+
+Autophagy spot detection and segmentation for fluorescence microscopy image analysis.
+

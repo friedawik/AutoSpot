@@ -1,0 +1,31 @@
+# Ignore data folder
+data/*
+
+# Ignore prominence source code in peak detection folder 
+peak_detection/prominence/codes_prominence
+
+# Ignore result folders in segmentation folder 
+spot_segmentation/cnn_segmentation/code/wandb*
+spot_segmentation/cnn_segmentation/code/lightning_logs*
+spot_segmentation/cnn_segmentation/code/__pycache__*
+spot_segmentation/yolo/*
+!spot_segmentation/yolo/*.py
+spot_segmentation/dinov2*
+!spot_segmentation/dinov2*.py
+
+
+# Ignore result folders i detection folder
+spot_detection/yolo/runs
+
+# Ignore files
+*.ckpt
+*.pth
+*.pt
+*.png
+*.tif
+*.tiff
+
+
+
+
+
