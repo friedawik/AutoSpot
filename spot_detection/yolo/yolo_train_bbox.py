@@ -2,7 +2,7 @@ from ultralytics import YOLO
 from IPython import embed
 
 """
-Code to train the YOLO11 model on custom data.
+Code to train the YOLO11 model on custom data with axis-aligned bounding boxes.
 """
 
 # Load a pretrained model
