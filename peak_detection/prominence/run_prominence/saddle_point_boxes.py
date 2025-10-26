@@ -50,7 +50,7 @@ df = pd.read_csv(file_path, delimiter=',', header=None)
 # Assign appropriate column names if desired
 df.columns = ['lat', 'long', 'elevation', 'key_s_lat', 'key_s_long', 'prominence']
 
-lim = 60
+lim = 60    # set prominence threshold, the df will be filtered
 img_size = x_scale
 for index, row in df.iterrows():
     if row['prominence'] > lim:
