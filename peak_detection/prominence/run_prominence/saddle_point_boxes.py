@@ -5,6 +5,12 @@ import numpy as np
 import pandas as pd
 from IPython import embed
 
+""" Code to extract saddle point location and use it to make a squared 
+    bounding box around spot. This could be used to make patches to simplify 
+    further segmentation but the approach was discontinued since some saddle
+    points were situated far away from peak.
+"""
+
 # Function to calculate the distance between two points
 def calculate_distance(x0, y0, x1, y1):
     return math.sqrt((x1 - x0) ** 2 + (y1 - y0) ** 2)
@@ -53,25 +59,20 @@ for index, row in df.iterrows():
         point = np.dot(point - img_size // 2, rotation_matrix.T) + img_size // 2
         x, y = point
         y = point[1]-img_size
-        # print(f'x={x} y={y}')
+
         # get sadle point
         sadle_point = np.array([row['key_s_lat'], row['key_s_long']])*x_scale
         sadle_point = np.dot(sadle_point - img_size // 2, rotation_matrix.T) + img_size // 2
         s_x, s_y = sadle_point
         s_y = sadle_point[1]-img_size
-        # print(f'x={s_x} y={s_y}')
         
         plt.plot(x, y, marker='.', markersize=2)
         radius = calculate_distance(x, y, s_x, s_y)
-        if radius<20:
-            print(radius)
-        # print(radius)
+
         # Get the bounding box
             bbox = bounding_box(x, y, radius)
             rect = plt.Rectangle((bbox[0], bbox[1]), 2*radius, 2*radius, edgecolor='red', facecolor='none')
             # Plot the circle and bounding box
             ax.add_patch(rect)
           
-      
-
 plt.savefig('bbox.png')
