@@ -12,8 +12,8 @@ The code folder contains scripts to perform segmentation using the AMG functiona
 
 | Model                    | \gls{iou} | F1 Score | Precision | Recall | Balanced Accuracy |
 |--------------------------|-----------|----------|-----------|--------|-------------------|
-| \gls{sam2} (finetuned)   | 0.60      | 0.71     | 0.70      | 0.81   | 0.90              |
-| \gls{sam2} (peak-prompted) | 0.58      | 0.72     | 0.79      | 0.69   | 0.84              |
+| SAM2 (finetuned)   | 0.60      | 0.71     | 0.70      | 0.81   | 0.90              |
+| SAM2 (peak-prompted) | 0.58      | 0.72     | 0.79      | 0.69   | 0.84              |
 
 **Performance metrics for SAM2 models compared to GT dataset.**
 
@@ -21,7 +21,7 @@ The code folder contains scripts to perform segmentation using the AMG functiona
 ### Visualization and Performance
 The Python scripts included in this repository assist with visualizing and evaluating the performance of the segmentation process. Since SAM2 is promptable, the Atg8 spots may be selected either manually or by some detection algorithm. Below is an example of segmentation masks (green lines) when different thresholds of prominence was used to select peaks (red dots).
 
-![Prompts](plots/sam_prompts.png)
+![Prompts](../plots/sam_prompts.png)
 
 
 ### Further reading
