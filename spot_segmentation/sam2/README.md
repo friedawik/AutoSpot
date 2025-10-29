@@ -21,7 +21,7 @@ The code folder contains scripts to perform segmentation using the AMG functiona
 ### Visualization and Performance
 The Python scripts included in this repository assist with visualizing and evaluating the performance of the segmentation process. Since SAM2 is promptable, the Atg8 spots may be selected either manually or by some detection algorithm. Below is an example of segmentation masks (green lines) when different thresholds of prominence was used to select peaks (red dots).
 
-![Prompts](plots/sam_prompts.png)
+![Prompts](spot_segmentation/sam2/plots/sam_prompts.png)
 
 
 ### Further reading
