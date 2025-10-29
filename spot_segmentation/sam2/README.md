@@ -10,7 +10,7 @@ The SAM2 model expects images with bit-depth of 8 bits. Since the Atg8 spots are
 ### Running the Analysis
 The code folder contains scripts to perform segmentation using the AMG functionality of SAM2, where the results are post-processed to clean up low-quality masks. We have tested both finetuned vit_b model and the original vit_b model, with either the default prompt grid or peaks as prompts. The peaks were found using the peak detection program 'mountains'.
 
-| Model                    | \gls{iou} | F1 Score | Precision | Recall | Balanced Accuracy |
+| Model                    | IoU | F1 Score | Precision | Recall | Balanced Accuracy |
 |--------------------------|-----------|----------|-----------|--------|-------------------|
 | SAM2 (finetuned)   | 0.60      | 0.71     | 0.70      | 0.81   | 0.90              |
 | SAM2 (peak-prompted) | 0.58      | 0.72     | 0.79      | 0.69   | 0.84              |
