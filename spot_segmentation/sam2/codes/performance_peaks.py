@@ -10,8 +10,9 @@ import matplotlib.pyplot as plt
 import cv2
 
 """
-This code runs a pretrained SAM2 prediction with peak prompts from 'mountains' code.
-Note that amg must be set to amg=True.
+This code loops through all test images and predicts masks using a pretrained SAM2 
+model with peak prompts from 'mountains' code. Note that amg must be set to amg=True.
+The code is adapted from: https://github.com/computational-cell-analytics/micro-sam
 
 The following post-processing threshold were tested. Modifying them will change 
 the segmentation outcome:
