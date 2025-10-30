@@ -2,7 +2,7 @@
 
 # AutoSpot
 
-Welcome to **AutoSpot**, a project focused on detecting and segmenting Atg8 spots in fluorescence microscopy images for autophagy research. This repository contains the code and methodologies developed during the master's thesis titled:
+Welcome to **AutoSpot**, a project focused on detecting and segmenting Atg8 spots in fluorescence microscopy images for autophagy research. This repository documents the code and methodologies developed during the master's thesis titled:
 
  **"Combining Traditional Image Analysis and Deep Learning for Enhanced Atg8 Spot Analysis in Autophagy Research."**
 
@@ -24,7 +24,7 @@ This repository is organised into several folders, each containing specific code
 
 ## Getting Started
 
-To use the codes contained within this repository, make sure to check the respective folders for detailed instructions and requirements. Each section is tailored to guide you through the setup and execution of the methods for effective Image Analysis in autophagy research.
+The respective folders include guidelines and requirements for using the provided methods. Each section outlines the tools we have utilised for effective Atg8 detection and segmentation in autophagy research.
 
-Thank you for taking the time to explore AutoSpot. We hope you find this resource helpful in your research on autophagy and Atg8 dynamics.
+Thank you for taking the time to explore AutoSpot. 
 
