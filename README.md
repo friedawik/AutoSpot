@@ -1,18 +1,20 @@
+# This repository is under construction and will be up to date within the firsst week of November, 2025.
+
 # AutoSpot
 
-## Overview
+Welcome to **AutoSpot**, a project focused on detecting and segmenting Atg8 spots in fluorescence microscopy images for autophagy research. This repository contains the code and methodologies developed during the master's thesis titled:
 
-Welcome to **AutoSpot**, a project focused on detecting and segmenting autophagy spots in fluorescence microscopy images. This repository contains the code and methodologies developed during the master's thesis titled **"Combining Traditional Image Analysis and Deep Learning for Enhanced Atg8 Spot Analysis in Autophagy Research."**
+ **"Combining Traditional Image Analysis and Deep Learning for Enhanced Atg8 Spot Analysis in Autophagy Research."**
 
 The thesis is part of the Master’s degree in Computational Science: Bioscience at the University of Oslo.
 
-![Prompts](spot_segmentation/sam2/plots/sam_prompts.png)
+![segmentation](spot_segmentation/plots/MF_MaxIP_3ch_2_000_230623_544_84_R1h_XY5_x1_y4.png)
 
 ## Repository Structure
 
 This repository is organised into several folders, each containing specific codes and functionalities:
 
-- **create_dataset**: This folder includes scripts for preparing fluorescence microscopy images for analysis. It contains codes to extract bounding boxes and perform initial analyses of the ground truth dataset.
+- **create_dataset**: This folder includes scripts for preparing fluorescence microscopy images for analysis. It contains codes to divide images into patches, extract bounding boxes, and perform initial analyses of the ground truth dataset.
 
 - **peak_detection**: In this section, you will find codes for performing peak detection utilising the 'mountains' and 'SpotSegmentor' algorithms.
 
@@ -22,7 +24,7 @@ This repository is organised into several folders, each containing specific code
 
 ## Getting Started
 
-To utilize the codes contained within this repository, make sure to check the respective folders for detailed instructions and requirements. Each section is tailored to guide you through the setup and execution of the methods for effective Image Analysis in autophagy research.
+To use the codes contained within this repository, make sure to check the respective folders for detailed instructions and requirements. Each section is tailored to guide you through the setup and execution of the methods for effective Image Analysis in autophagy research.
 
-Thank you for taking the time to explore AutoSpot. We hope you find this resource helpful in your research on autophagy analysis and image processing techniques.
+Thank you for taking the time to explore AutoSpot. We hope you find this resource helpful in your research on autophagy and Atg8 dynamics.
 
