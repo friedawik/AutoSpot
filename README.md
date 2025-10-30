@@ -1,4 +1,4 @@
-# This repository is under construction and will be up to date within the firsst week of November, 2025.
+# This repository is under construction and will be up to date within the first week of November, 2025.
 
 # AutoSpot
 

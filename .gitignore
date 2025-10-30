@@ -21,7 +21,6 @@ spot_detection/yolo/runs
 *.ckpt
 *.pth
 *.pt
-*.png
 *.tif
 *.tiff
 
