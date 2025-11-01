@@ -23,6 +23,7 @@ spot_detection/yolo/runs
 *.pt
 *.tif
 *.tiff
+__pycache__/
 
 
 
