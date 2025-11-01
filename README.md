@@ -14,7 +14,7 @@ The thesis is part of the Master’s degree in Computational Science: Bioscience
 
 This repository is organised into several folders, each containing specific codes and functionalities:
 
-- **create_dataset**: This folder includes scripts for preparing fluorescence microscopy images for analysis. It contains codes to divide images into patches, extract bounding boxes, and perform initial analyses of the ground truth dataset.
+- **create_dataset**: This folder includes scripts for preparing the fluorescence microscopy images for analysis. It contains codes to divide images into patches, extract bounding boxes, and perform initial analyses of the ground truth dataset.
 
 - **peak_detection**: In this section, you will find codes for performing peak detection utilising the 'mountains' and 'SpotSegmentor' algorithms.
 
@@ -22,9 +22,5 @@ This repository is organised into several folders, each containing specific code
 
 - **spot_segmentation**: Here, you can access various codes for spot segmentation, employing multiple models including SAM2, micro-SAM, U-Net++, YOLO11, DeepLabV3+, Segformer, and SpotSegmentor.
 
-## Getting Started
-
-The respective folders include guidelines and requirements for using the provided methods. Each section outlines the tools we have utilised for effective Atg8 detection and segmentation in autophagy research.
-
-Thank you for taking the time to explore AutoSpot. 
+The respective folders include guidelines and requirements for using the provided methods. Each section outlines the tools we have utilised for effective Atg8 detection and segmentation in autophagy research. Thank you for taking the time to explore AutoSpot. 
 
