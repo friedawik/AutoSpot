@@ -1,6 +1,10 @@
 ## Peak Detection Using Mountains Code 
 
-This repository contains code to apply Andrew Kirmse's "mountains" algorithm on fluorescent microscopy data to detect Atg8 peaks in grayscale images.
+This folder contains code to apply Andrew Kirmse's "mountains" algorithm on fluorescent microscopy data to detect Atg8 peaks in grayscale images.
+
+![prominence](results/MF_MaxIP_3ch_2_000_230623_544_84_R1h_XY5.png)
+
+
 ### Installation of 'Mountains'
 To get started, you will need to install the "mountains" source code, which can be found at the following URL: https://github.com/akirmse/mountains.
 
