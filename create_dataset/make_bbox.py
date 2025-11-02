@@ -3,6 +3,8 @@ import cv2
 from IPython import embed
 import numpy as np
 
+""" Script to save bounding boxes in yolo format """
+
 # Path to data folder
 data_dir = os.path.join(os.getcwd(), 'patch_256_detection')
 

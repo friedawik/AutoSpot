@@ -8,6 +8,8 @@ import cv2
 import matplotlib.pyplot as plt
 from skimage.feature import peak_local_max
 
+""" Script to get characteristics of GT masks """
+
 def check_multiple_maxima(image, min_distance=20, threshold_rel=0.8):
     coordinates = peak_local_max(image, min_distance=min_distance, threshold_rel=threshold_rel)
     return len(coordinates) 

@@ -5,6 +5,8 @@ from IPython import embed
 import cv2
 import matplotlib.pyplot as plt
 
+""" Script to get characteristics of GT masks """
+
 
 # read three channel tif images and convert to np array
 def tiff_to_array(tiff_path):

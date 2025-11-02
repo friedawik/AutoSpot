@@ -2,7 +2,7 @@
 
 # AutoSpot
 
-Welcome to **AutoSpot**, a project focused on detecting and segmenting Atg8 spots in fluorescence microscopy images for autophagy research. This repository documents the code and methodologies developed during a master's thesis in Computational Bioscience at the University of Oslo:
+Welcome to **AutoSpot**, a project focused on detecting and segmenting Atg8 spots in fluorescence microscopy images for autophagy research. This repository documents the code and methodologies developed during the master's thesis in Computational Bioscience at the University of Oslo with the follwong title:
 
  **"Combining Traditional Image Analysis and Deep Learning for Enhanced Atg8 Spot Analysis in Autophagy Research."**
 
@@ -16,7 +16,7 @@ This repository is organised into several folders, each containing specific code
 
 - **cell_segmentation**: This folder documents the work to perform cell segmentation of Drosophila melanogaster larval cells.
 
-- **cellular_dataset**: This folder documents the work performed on the Cellular dataset. The datasets were later exchanged, and the work is not included in the thesis.
+- **cellular_dataset**: This folder documents the work performed on another dataset, the Cellular dataset. This dataset was later exchanged with new in-vivo data, and the work from this folder was not included in the final thesis.
 
 - **create_dataset**: This folder includes scripts for preparing the fluorescence microscopy images for analysis. It contains codes to divide images into patches, extract bounding boxes, and perform initial analyses of the ground truth dataset.
 
@@ -26,7 +26,7 @@ This repository is organised into several folders, each containing specific code
 
 - **spot_segmentation**: Here, you can access various codes for spot segmentation, employing multiple models including SAM2, micro-SAM, U-Net++, YOLO11, DeepLabV3+, Segformer, and SpotSegmentor.
 
-The respective folders include guidelines and requirements for using the provided methods. Each section outlines the tools we have utilised for effective Atg8 detection and segmentation in autophagy research. We also include som notebooks that were created for various meetings during the project, to show some of the working process.
+The respective folders include guidelines and requirements for using the provided methods. Each section outlines the tools we have utilised for effective Atg8 detection and segmentation in autophagy research. We also include som notebooks that were created during the project, to show some of the working process.
  
 Thank you for taking the time to explore AutoSpot. 
 

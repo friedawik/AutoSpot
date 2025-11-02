@@ -4,6 +4,8 @@ from IPython import embed
 import numpy as np
 from pathlib import Path
 
+""" Script to save oriented bounding boxes in yolo format """
+
 def get_oriented_bbox(contour):
     rect = cv2.minAreaRect(contour)
     box = cv2.boxPoints(rect)

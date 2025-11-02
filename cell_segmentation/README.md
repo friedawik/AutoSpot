@@ -1,0 +1,4 @@
+### Cell segmentation
+Individual cell segmentation was performed using the graphical user interface (GUI) of the Cellpose tool. Stained cell border images were utilised to train a segmentation model, which was subsequently applied to the images in our dataset. Both types of images contained the DAPI channel, along with either mCherry-tagged Atg8 (from our dataset) or GFP-tagged Atg8 (from the images used in the ground truth set). This overlap allowed the trained model to be used on our data.
+
+The segmentation process was only evaluated through visual inspection. The aim was to isolating enough cells for subsequent spot analysis. The process is described in the notebook.
