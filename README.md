@@ -1,12 +1,10 @@
-# This repository is under construction and will be up to date within the first week of November, 2025.
-
 # AutoSpot
 
 Welcome to **AutoSpot**, a project focused on detecting and segmenting Atg8 spots in fluorescence microscopy images for autophagy research. This repository documents the code and methodologies developed during the master's thesis in Computational Bioscience at the University of Oslo with the follwong title:
 
  **"Combining Traditional Image Analysis and Deep Learning for Enhanced Atg8 Spot Analysis in Autophagy Research."**
 
- 
+The primary objective of this project was to develop a method for the automatic identification and extraction of mCherry-tagged Atg8 spots from fluorescent images of Drosophila melanogaster larval cells, as illustrated by the example images provided below.
 
 ![segmentation](spot_segmentation/plots/MF_MaxIP_3ch_2_000_230623_544_84_R1h_XY5_x1_y4.png)
 
@@ -26,7 +24,7 @@ This repository is organised into several folders, each containing specific code
 
 - **spot_segmentation**: Here, you can access various codes for spot segmentation, employing multiple models including SAM2, micro-SAM, U-Net++, YOLO11, DeepLabV3+, Segformer, and SpotSegmentor.
 
-The respective folders include guidelines and requirements for using the provided methods. Each section outlines the tools we have utilised for effective Atg8 detection and segmentation in autophagy research. We also include som notebooks that were created during the project, to show some of the working process.
+We have also include several notebooks that were created throughout the project, often in preparation for group meetings. These notebooks do not necessary include any final results but they show some of the work process along the way.
  
 Thank you for taking the time to explore AutoSpot. 
 
