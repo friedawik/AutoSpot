@@ -10,7 +10,7 @@ The primary objective of this project was to develop a method for the automatic 
 
 ## Repository Structure
 
-This repository is organised into several folders, each containing specific codes and functionalities:
+This repository is organised into several folders, each documenting different parts of the project:
 
 - **cell_segmentation**: This folder documents the work to perform cell segmentation of Drosophila melanogaster larval cells.
 

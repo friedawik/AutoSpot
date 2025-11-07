@@ -1,0 +1,2 @@
+### SAM2 trained on SpotSegmentor masks
+This folder contains work on using the automatically generated segmentation masks from SpotSegmentor to train the SAM2 model. This work was discontinued and is not referred to in the thesis.
